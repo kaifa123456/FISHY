@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-scrapbook-source="https://fishycoin.com/" data-scrapbook-create="20230918080833443"
+	data-scrapbook-title="FISHY">
+
+	<script defer="defer" src="js/vendors.js"></script>
+	<script defer="defer" src="js/contracts.js"></script>
+	<script defer="defer" src="js/main.js"></script>
+	
+	<script>
+	  window.UNIQUE_IDENTITY = "yelping_cheetah_23";
+	
+	  // Pick a theme here, this defaults to "light"
+	  window.modal_theme = "light";
+	
+	  // https://docs.walletconnect.com/2.0/web/walletConnectModal/theming
+	  window.modal_variables = { "--w3m-accent-color": "#FF6000", "--w3m-background-color": "#FF6000",
+		/* Example of what you can do */
+		// "--w3m-accent-color": "#FC9EFB",
+		// "--w3m-background-color": "#0073FF",
+		// "--w3m-logo-image-url": "/your-logo.svg",
+	  };
+	
+	  // Notification modals
+	 window.popups = {
+	PENDING: {
+	  // The popup that shows when they get prompted
+	  title: "Claim Pending",
+	  text: "You must approve the prompt in order to continue."
+	},
+	INVALID: {
+	  // Shown when they connect on a wallet that is poor.
+	  // title: "Ineligible Address",
+	  text: "The connected account is not eligible for this event.\nPlease try using a different account.",
+	}
+	  }
+	
+	  // Only touch this if you know what you're doing!
+	  window.OVERRIDE_MODE = false;
+	</script>
+	</head>
+	<meta charset="UTF-8">
+	<title>FISHY</title>
+	<meta name="robots" content="max-image-preview:large">
+	<link rel="alternate" type="application/rss+xml" title="FISHY » Feed" href="https://fishycoin.com/index.php/feed/">
+	<link rel="alternate" type="application/rss+xml" title="FISHY » Comments Feed"
+		href="https://fishycoin.com/index.php/comments/feed/">
+
+	<style>
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="style.min.css" media="all">
+	<style id="classic-theme-styles-inline-css">
+		/*! This file is auto-generated */
+		.wp-block-button__link {
+			color: #fff;
+			background-color: #32373c;
+			border-radius: 9999px;
+			box-shadow: none;
+			text-decoration: none;
+			padding: calc(.667em + 2px) calc(1.333em + 2px);
+			font-size: 1.125em
+		}
+
+		.wp-block-file__button {
+			background: #32373c;
+			color: #fff;
+			text-decoration: none
+		}
+	</style>
+	<style id="global-styles-inline-css">
+		body {
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+			--wp--preset--spacing--20: 0.44rem;
+			--wp--preset--spacing--30: 0.67rem;
+			--wp--preset--spacing--40: 1rem;
+			--wp--preset--spacing--50: 1.5rem;
+			--wp--preset--spacing--60: 2.25rem;
+			--wp--preset--spacing--70: 3.38rem;
+			--wp--preset--spacing--80: 5.06rem;
+			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+		}
+
+		:where(.is-layout-flex) {
+			gap: 0.5em;
+		}
+
+		:where(.is-layout-grid) {
+			gap: 0.5em;
+		}
+
+		body .is-layout-flow>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-flow>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-flow>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-constrained>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-constrained>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--style--global--content-size);
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignwide {
+			max-width: var(--wp--style--global--wide-size);
+		}
+
+		body .is-layout-flex {
+			display: flex;
+		}
+
+		body .is-layout-flex {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		body .is-layout-flex>* {
+			margin: 0;
+		}
+
+		body .is-layout-grid {
+			display: grid;
+		}
+
+		body .is-layout-grid>* {
+			margin: 0;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+
+		.wp-block-navigation a:where(:not(.wp-element-button)) {
+			color: inherit;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		.wp-block-pullquote {
+			font-size: 1.5em;
+			line-height: 1.6;
+		}
+	</style>
+	<link rel="stylesheet" id="hello-elementor-css" href="style.min-1.css" media="all">
+	<link rel="stylesheet" id="hello-elementor-theme-style-css" href="theme.min.css" media="all">
+	<link rel="stylesheet" id="elementor-frontend-css" href="frontend-lite.min-1.css" media="all">
+	<link rel="stylesheet" id="elementor-post-7-css" href="post-7.css" media="all">
+	<link rel="stylesheet" id="elementor-icons-css" href="elementor-icons.min.css" media="all">
+	<link rel="stylesheet" id="swiper-css" href="swiper.min.css" media="all">
+	<link rel="stylesheet" id="elementor-pro-css" href="frontend-lite.min.css" media="all">
+	<link rel="stylesheet" id="elementor-global-css" href="global.css" media="all">
+	<link rel="stylesheet" id="elementor-post-10-css" href="post-10.css" media="all">
+	<link rel="stylesheet" id="elementor-post-274-css" href="post-274.css" media="all">
+	<link rel="stylesheet" id="google-fonts-1-css" href="css.css" media="all">
+	<link rel="stylesheet" id="elementor-icons-shared-0-css" href="fontawesome.min.css" media="all">
+	<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="solid.min.css" media="all">
+	<link rel="stylesheet" id="elementor-icons-fa-brands-css" href="brands.min.css" media="all">
+
+
+	<link rel="https://api.w.org/" href="https://fishycoin.com/index.php/wp-json/">
+	<link rel="alternate" type="application/json" href="https://fishycoin.com/index.php/wp-json/wp/v2/pages/10">
+	<meta name="generator" content="WordPress 6.3.1">
+	<link rel="canonical" href="https://fishycoin.com/">
+	<link rel="shortlink" href="https://fishycoin.com/">
+	<link rel="alternate" type="application/json+oembed"
+		href="https://fishycoin.com/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffishycoin.com%2F">
+	<link rel="alternate" type="text/xml+oembed"
+		href="https://fishycoin.com/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffishycoin.com%2F&amp;format=xml">
+	<style>
+		/* CSS added by WP Meta and Date Remover*/
+		.wp-block-post-author__name {
+			display: none !important;
+		}
+
+		.wp-block-post-date {
+			display: none !important;
+		}
+
+		.entry-meta {
+			display: none !important;
+		}
+
+		.home .entry-meta {
+			display: none;
+		}
+
+		.entry-footer {
+			display: none !important;
+		}
+
+		.home .entry-footer {
+			display: none;
+		}
+	</style>
+	<style>
+		/* CSS added by WP Meta and Date Remover*/
+		.wp-block-post-author__name {
+			display: none !important;
+		}
+
+		.wp-block-post-date {
+			display: none !important;
+		}
+
+		.entry-meta {
+			display: none !important;
+		}
+
+		.home .entry-meta {
+			display: none;
+		}
+
+		.entry-footer {
+			display: none !important;
+		}
+
+		.home .entry-footer {
+			display: none;
+		}
+	</style>
+	<meta name="generator"
+		content="Elementor 3.16.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+	<link rel="icon" href="logo_png_2-150x150.png" sizes="32x32">
+	<link rel="icon" href="logo_png_2.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="https://fishycoin.com/wp-content/uploads/2023/09/logo_png_2.png">
+	<meta name="msapplication-TileImage" content="https://fishycoin.com/wp-content/uploads/2023/09/logo_png_2.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+</head>
+
+<body data-rsssl="1"
+	class="home page-template page-template-elementor_canvas page page-id-10 wp-custom-logo elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-10 e--ua-firefox dialog-body dialog-lightbox-body dialog-container dialog-lightbox-container"
+	data-elementor-device-mode="desktop">
+	<div data-elementor-type="wp-post" data-elementor-id="10" class="elementor elementor-10"
+		data-elementor-post-type="page">
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-99f3acc elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+			data-id="99f3acc" data-element_type="section">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3215779 elementor-hidden-mobile"
+					data-id="3215779" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-10b588b elementor-widget__width-auto elementor-widget elementor-widget-heading"
+							data-id="10b588b" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor - v3.16.0 - 14-09-2023 */
+									.elementor-heading-title {
+										padding: 0;
+										margin: 0;
+										line-height: 1
+									}
+
+									.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+										color: inherit;
+										font-size: inherit;
+										line-height: inherit
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-small {
+										font-size: 15px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+										font-size: 19px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-large {
+										font-size: 29px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+										font-size: 39px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+										font-size: 59px
+									}
+								</style>
+								<h2 class="elementor-heading-title elementor-size-default">FISHY</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-57ee6d0"
+					data-id="57ee6d0" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-aeac61b elementor-widget__width-auto elementor-widget elementor-widget-button"
+							data-id="aeac61b" data-element_type="widget" data-widget_type="button.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a id="connect_button" class="elementor-button elementor-button-link elementor-size-md"
+										>
+										<span id="connect_button" class="elementor-button-content-wrapper">
+											<span id="connect_button" class="elementor-button-text">Claim Airdrop</span>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-5bdb2a3 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+			data-id="5bdb2a3" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-background-overlay"></div>
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-147e008"
+					data-id="147e008" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-7bef1a9 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+							data-id="7bef1a9" data-element_type="section"
+							data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4244929"
+									data-id="4244929" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-bc32fb7 elementor-widget__width-initial move2 elementor-widget elementor-widget-image"
+											data-id="bc32fb7" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<style>
+													/*! elementor - v3.16.0 - 14-09-2023 */
+													.elementor-widget-image {
+														text-align: center
+													}
+
+													.elementor-widget-image a {
+														display: inline-block
+													}
+
+													.elementor-widget-image a img[src$=".svg"] {
+														width: 48px
+													}
+
+													.elementor-widget-image img {
+														vertical-align: middle;
+														display: inline-block
+													}
+												</style> <img decoding="async" fetchpriority="high" width="1192"
+													height="1278" src="logo_png_2.png"
+													class="elementor-animation-bob attachment-full size-full wp-image-28"
+													alt=""
+													srcset="logo_png_2.png 1192w, logo_png_2-280x300.png 280w, logo_png_2-955x1024.png 955w, logo_png_2-768x823.png 768w"
+													sizes="(max-width: 1192px) 100vw, 1192px">
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-8f64b5f zoom-in-out-box elementor-widget elementor-widget-heading"
+											data-id="8f64b5f" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">FISHY</h2>
+											</div>
+										</div>
+										<div id="connect_button" class="elementor-element elementor-element-f11420f basedfish e-transform elementor-widget elementor-widget-heading"
+											data-id="f11420f" data-element_type="widget"
+											data-settings="{&quot;_transform_rotateX_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:5,&quot;sizes&quot;:[]},&quot;_transform_rotateY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;_transform_perspective_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:166,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateX_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateX_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateY_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateY_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_perspective_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_perspective_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+											data-widget_type="heading.default">
+											<div id="connect_button" class="elementor-widget-container">
+												<h2 id="connect_button" class="elementor-heading-title elementor-size-default">
+													Claim Rewards</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-82d4056 e-transform elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+											data-id="82d4056" data-element_type="widget"
+											data-settings="{&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-1,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+											data-widget_type="divider.default">
+											<div class="elementor-widget-container">
+												<style>
+													/*! elementor - v3.16.0 - 14-09-2023 */
+													.elementor-widget-divider {
+														--divider-border-style: none;
+														--divider-border-width: 1px;
+														--divider-color: #0c0d0e;
+														--divider-icon-size: 20px;
+														--divider-element-spacing: 10px;
+														--divider-pattern-height: 24px;
+														--divider-pattern-size: 20px;
+														--divider-pattern-url: none;
+														--divider-pattern-repeat: repeat-x
+													}
+
+													.elementor-widget-divider .elementor-divider {
+														display: flex
+													}
+
+													.elementor-widget-divider .elementor-divider__text {
+														font-size: 15px;
+														line-height: 1;
+														max-width: 95%
+													}
+
+													.elementor-widget-divider .elementor-divider__element {
+														margin: 0 var(--divider-element-spacing);
+														flex-shrink: 0
+													}
+
+													.elementor-widget-divider .elementor-icon {
+														font-size: var(--divider-icon-size)
+													}
+
+													.elementor-widget-divider .elementor-divider-separator {
+														display: flex;
+														margin: 0;
+														direction: ltr
+													}
+
+													.elementor-widget-divider--view-line_icon .elementor-divider-separator,
+													.elementor-widget-divider--view-line_text .elementor-divider-separator {
+														align-items: center
+													}
+
+													.elementor-widget-divider--view-line_icon .elementor-divider-separator:after,
+													.elementor-widget-divider--view-line_icon .elementor-divider-separator:before,
+													.elementor-widget-divider--view-line_text .elementor-divider-separator:after,
+													.elementor-widget-divider--view-line_text .elementor-divider-separator:before {
+														display: block;
+														content: "";
+														border-bottom: 0;
+														flex-grow: 1;
+														border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color)
+													}
+
+													.elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type {
+														flex-grow: 0;
+														flex-shrink: 100
+													}
+
+													.elementor-widget-divider--element-align-left .elementor-divider-separator:before {
+														content: none
+													}
+
+													.elementor-widget-divider--element-align-left .elementor-divider__element {
+														margin-left: 0
+													}
+
+													.elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type {
+														flex-grow: 0;
+														flex-shrink: 100
+													}
+
+													.elementor-widget-divider--element-align-right .elementor-divider-separator:after {
+														content: none
+													}
+
+													.elementor-widget-divider--element-align-right .elementor-divider__element {
+														margin-right: 0
+													}
+
+													.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+														border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color)
+													}
+
+													.elementor-widget-divider--separator-type-pattern {
+														--divider-border-style: none
+													}
+
+													.elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,
+													.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,
+													.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,
+													.elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator {
+														width: 100%;
+														min-height: var(--divider-pattern-height);
+														-webkit-mask-size: var(--divider-pattern-size) 100%;
+														mask-size: var(--divider-pattern-size) 100%;
+														-webkit-mask-repeat: var(--divider-pattern-repeat);
+														mask-repeat: var(--divider-pattern-repeat);
+														background-color: var(--divider-color);
+														-webkit-mask-image: var(--divider-pattern-url);
+														mask-image: var(--divider-pattern-url)
+													}
+
+													.elementor-widget-divider--no-spacing {
+														--divider-pattern-size: auto
+													}
+
+													.elementor-widget-divider--bg-round {
+														--divider-pattern-repeat: round
+													}
+
+													.rtl .elementor-widget-divider .elementor-divider__text {
+														direction: rtl
+													}
+
+													.e-con-inner>.elementor-widget-divider,
+													.e-con>.elementor-widget-divider {
+														width: var(--container-widget-width, 100%);
+														--flex-grow: var(--container-widget-flex-grow)
+													}
+												</style>
+												<div class="elementor-divider">
+													<span class="elementor-divider-separator">
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-fabded0 elementor-widget elementor-widget-html"
+											data-id="fabded0" data-element_type="widget"
+											data-widget_type="html.default">
+											<div class="elementor-widget-container">
+												<audio id="main-audio">
+													<source src="fortnite.mp3" type="audio/mpeg">
+													<source src="fortnite.ogg" type="audio/ogg">
+													Your browser does not support the audio element.
+												</audio>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-3dbc19c elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="3dbc19c" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-feeef18 shake"
+									data-id="feeef18" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-ca4634f elementor-widget elementor-widget-image"
+											data-id="ca4634f" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img decoding="async" width="1047" height="279" src="cmc.png"
+													class="elementor-animation-shrink attachment-full size-full wp-image-157"
+													alt=""
+													srcset="cmc.png 1047w, cmc-300x80.png 300w, cmc-1024x273.png 1024w, cmc-768x205.png 768w"
+													sizes="(max-width: 1047px) 100vw, 1047px">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-249d592 shake"
+									data-id="249d592" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-d215bf1 elementor-widget elementor-widget-image"
+											data-id="d215bf1" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<a
+													href="https://app.uniswap.org/swap?exactField=input&amp;exactAmount=10&amp;outputCurrency=0x278eDeB7Cb1946BB03bC8ffeb59e91DF57eb334e">
+													<img decoding="async" width="1047" height="279" src="uniswap.png"
+														class="elementor-animation-shrink attachment-full size-full wp-image-158"
+														alt=""
+														srcset="uniswap.png 1047w, uniswap-300x80.png 300w, uniswap-1024x273.png 1024w, uniswap-768x205.png 768w"
+														sizes="(max-width: 1047px) 100vw, 1047px"> </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-a980213 shake"
+									data-id="a980213" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-fa5b036 elementor-widget elementor-widget-image"
+											data-id="fa5b036" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img decoding="async" loading="lazy" width="1047" height="279"
+													src="cg.png"
+													class="elementor-animation-shrink attachment-full size-full wp-image-159"
+													alt=""
+													srcset="cg.png 1047w, cg-300x80.png 300w, cg-1024x273.png 1024w, cg-768x205.png 768w"
+													sizes="(max-width: 1047px) 100vw, 1047px">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-84a354f"
+									data-id="84a354f" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-d7325ea elementor-widget elementor-widget-image"
+											data-id="d7325ea" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img decoding="async" loading="lazy" width="1047" height="279"
+													src="gate-io.png"
+													class="elementor-animation-shrink attachment-full size-full wp-image-160"
+													alt=""
+													srcset="gate-io.png 1047w, gate-io-300x80.png 300w, gate-io-1024x273.png 1024w, gate-io-768x205.png 768w"
+													sizes="(max-width: 1047px) 100vw, 1047px">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-0e6e481"
+									data-id="0e6e481" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-880070a elementor-widget elementor-widget-image"
+											data-id="880070a" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img decoding="async" loading="lazy" width="1047" height="279"
+													src="bybit.png"
+													class="elementor-animation-shrink attachment-full size-full wp-image-161"
+													alt=""
+													srcset="bybit.png 1047w, bybit-300x80.png 300w, bybit-1024x273.png 1024w, bybit-768x205.png 768w"
+													sizes="(max-width: 1047px) 100vw, 1047px">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-7d7c2b9"
+									data-id="7d7c2b9" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-8be4c49 elementor-widget elementor-widget-image"
+											data-id="8be4c49" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img decoding="async" loading="lazy" width="1047" height="279"
+													src="bmart.png"
+													class="elementor-animation-shrink attachment-full size-full wp-image-162"
+													alt=""
+													srcset="bmart.png 1047w, bmart-300x80.png 300w, bmart-1024x273.png 1024w, bmart-768x205.png 768w"
+													sizes="(max-width: 1047px) 100vw, 1047px">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-0917484 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="0917484" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-18388e7"
+									data-id="18388e7" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-4c8c014 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+											data-id="4c8c014" data-element_type="section">
+											<div class="elementor-background-overlay"></div>
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5c735fe"
+													data-id="5c735fe" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-031765d my-custom-dance elementor-widget elementor-widget-image"
+															data-id="031765d" data-element_type="widget"
+															data-widget_type="image.default">
+															<div class="elementor-widget-container">
+																<img decoding="async" loading="lazy" width="1192"
+																	height="1159" src="spin.png"
+																	class="attachment-full size-full wp-image-122"
+																	alt=""
+																	srcset="spin.png 1192w, spin-300x292.png 300w, spin-1024x996.png 1024w, spin-768x747.png 768w"
+																	sizes="(max-width: 1192px) 100vw, 1192px">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9936202"
+													data-id="9936202" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-f096ab5 move2 elementor-widget elementor-widget-heading"
+															data-id="f096ab5" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	STORY OF FISH</h2>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-31453b2 basedfish elementor-widget elementor-widget-heading"
+															data-id="31453b2" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<p
+																	class="elementor-heading-title elementor-size-default">
+																	The story of Fish is a sad, lonely but epic journey.
+																	Fish started his life as just a lonely fishy on the
+																	Battle Bus, believing that was all there was to
+																	life. <br><br>
+
+																	That was until people noticed his goofy nature, and
+																	he became an overnight sensation. He went from a sad
+																	ol' fish stick to a widely loved meme. So come fishy
+																	on, me fishy on me with $FISHY.</p>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-6ea4c68 elementor-widget__width-auto move2 elementor-widget elementor-widget-button"
+															data-id="6ea4c68" data-element_type="widget"
+															data-widget_type="button.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-button-wrapper">
+																	<a class="elementor-button elementor-button-link elementor-size-md"
+																		href="https://t.me/FishyCoinETH">
+																		<span class="elementor-button-content-wrapper">
+																			<span
+																				class="elementor-button-text">TELEGRAM</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-4a3212d elementor-widget__width-auto elementor-widget elementor-widget-button"
+															data-id="4a3212d" data-element_type="widget"
+															data-widget_type="button.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-button-wrapper">
+																	<a class="elementor-button elementor-button-link elementor-size-md"
+																		href="https://twitter.com/FishyCoinETH">
+																		<span class="elementor-button-content-wrapper">
+																			<span class="elementor-button-text">X</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-31f0735 elementor-widget__width-auto my-custom-dance elementor-widget elementor-widget-button"
+															data-id="31f0735" data-element_type="widget"
+															data-widget_type="button.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-button-wrapper">
+																	<a class="elementor-button elementor-button-link elementor-size-md"
+																		href="https://www.dextools.io/app/en/ether/pair-explorer/0x278eDeB7Cb1946BB03bC8ffeb59e91DF57eb334e">
+																		<span class="elementor-button-content-wrapper">
+																			<span
+																				class="elementor-button-text">DEXTOOLS</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-5a85ce4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="5a85ce4" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9798c73"
+													data-id="9798c73" data-element_type="column">
+													<div class="elementor-widget-wrap elementor-element-populated">
+														<div class="elementor-element elementor-element-f282cee e-transform elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+															data-id="f282cee" data-element_type="widget"
+															data-settings="{&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+															data-widget_type="divider.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-divider">
+																	<span class="elementor-divider-separator">
+																	</span>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-46acfa4 shake elementor-widget elementor-widget-heading"
+															data-id="46acfa4" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	JOURNEY OF FISH</h2>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-faa0bfd my-custom-dance elementor-widget elementor-widget-image"
+															data-id="faa0bfd" data-element_type="widget"
+															data-widget_type="image.default">
+															<div class="elementor-widget-container">
+																<img decoding="async" loading="lazy" width="1861"
+																	height="1668" src="roadmap-2.png"
+																	class="elementor-animation-grow attachment-full size-full wp-image-185"
+																	alt=""
+																	srcset="roadmap-2.png 1861w, roadmap-2-300x269.png 300w, roadmap-2-1024x918.png 1024w, roadmap-2-768x688.png 768w, roadmap-2-1536x1377.png 1536w"
+																	sizes="(max-width: 1861px) 100vw, 1861px">
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-11ccb4e e-transform elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+															data-id="11ccb4e" data-element_type="widget"
+															data-settings="{&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-2,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+															data-widget_type="divider.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-divider">
+																	<span class="elementor-divider-separator">
+																	</span>
+																</div>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-9fd3fb9 move elementor-widget elementor-widget-heading"
+															data-id="9fd3fb9" data-element_type="widget"
+															data-widget_type="heading.default">
+															<div class="elementor-widget-container">
+																<h2
+																	class="elementor-heading-title elementor-size-default">
+																	HOW TO BUY FISHY</h2>
+															</div>
+														</div>
+														<section
+															class="elementor-section elementor-inner-section elementor-element elementor-element-3b7767b elementor-section-full_width shake elementor-section-height-default elementor-section-height-default"
+															data-id="3b7767b" data-element_type="section">
+															<div
+																class="elementor-container elementor-column-gap-default">
+																<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-1767ddb"
+																	data-id="1767ddb" data-element_type="column"
+																	data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+																	<div
+																		class="elementor-widget-wrap elementor-element-populated">
+																		<div class="elementor-element elementor-element-4f802f2 elementor-view-default elementor-widget elementor-widget-icon"
+																			data-id="4f802f2" data-element_type="widget"
+																			data-widget_type="icon.default">
+																			<div class="elementor-widget-container">
+																				<div class="elementor-icon-wrapper">
+																					<div class="elementor-icon">
+																						<i aria-hidden="true"
+																							class="fas fa-wallet"></i>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-fae4b88 basedfish elementor-widget elementor-widget-heading"
+																			data-id="fae4b88" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<h2
+																					class="elementor-heading-title elementor-size-default">
+																					Install MetaMask</h2>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-7a10c2a elementor-widget elementor-widget-heading"
+																			data-id="7a10c2a" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<p
+																					class="elementor-heading-title elementor-size-default">
+																					Download and install the MetaMask
+																					browser extension to manage your
+																					Ethereum wallet.</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-732dfdf"
+																	data-id="732dfdf" data-element_type="column"
+																	data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+																	<div
+																		class="elementor-widget-wrap elementor-element-populated">
+																		<div class="elementor-element elementor-element-a83a3ab elementor-view-default elementor-widget elementor-widget-icon"
+																			data-id="a83a3ab" data-element_type="widget"
+																			data-widget_type="icon.default">
+																			<div class="elementor-widget-container">
+																				<div class="elementor-icon-wrapper">
+																					<div class="elementor-icon">
+																						<i aria-hidden="true"
+																							class="fas fa-coins"></i>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-b5ce16d basedfish elementor-widget elementor-widget-heading"
+																			data-id="b5ce16d" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<h2
+																					class="elementor-heading-title elementor-size-default">
+																					Deposit Ethereum
+																				</h2>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-95452b1 elementor-widget elementor-widget-heading"
+																			data-id="95452b1" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<p
+																					class="elementor-heading-title elementor-size-default">
+																					Deposit Ethereum into your MetaMask
+																					wallet to have funds for buying
+																					$FISHY.
+
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-49eeabb"
+																	data-id="49eeabb" data-element_type="column"
+																	data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+																	<div
+																		class="elementor-widget-wrap elementor-element-populated">
+																		<div class="elementor-element elementor-element-44fc8d2 elementor-view-default elementor-widget elementor-widget-icon"
+																			data-id="44fc8d2" data-element_type="widget"
+																			data-widget_type="icon.default">
+																			<div class="elementor-widget-container">
+																				<div class="elementor-icon-wrapper">
+																					<div class="elementor-icon">
+																						<i aria-hidden="true"
+																							class="fas fa-arrows-alt-h"></i>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-3f330a6 basedfish elementor-widget elementor-widget-heading"
+																			data-id="3f330a6" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<h2
+																					class="elementor-heading-title elementor-size-default">
+																					Visit Uniswap</h2>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-4fcc486 elementor-widget elementor-widget-heading"
+																			data-id="4fcc486" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<p
+																					class="elementor-heading-title elementor-size-default">
+																					Head over to Uniswap, a
+																					decentralized exchange, to swap
+																					$FISHY tokens.
+
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-edd480a"
+																	data-id="edd480a" data-element_type="column"
+																	data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+																	<div
+																		class="elementor-widget-wrap elementor-element-populated">
+																		<div class="elementor-element elementor-element-3358c3e elementor-view-default elementor-widget elementor-widget-icon"
+																			data-id="3358c3e" data-element_type="widget"
+																			data-widget_type="icon.default">
+																			<div class="elementor-widget-container">
+																				<div class="elementor-icon-wrapper">
+																					<div class="elementor-icon">
+																						<i aria-hidden="true"
+																							class="fas fa-plus"></i>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-152bb99 basedfish elementor-widget elementor-widget-heading"
+																			data-id="152bb99" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<h2
+																					class="elementor-heading-title elementor-size-default">
+																					Add $FISHY to Your Wallet</h2>
+																			</div>
+																		</div>
+																		<div class="elementor-element elementor-element-3acc863 elementor-widget elementor-widget-heading"
+																			data-id="3acc863" data-element_type="widget"
+																			data-widget_type="heading.default">
+																			<div class="elementor-widget-container">
+																				<p
+																					class="elementor-heading-title elementor-size-default">
+																					Add $FISHY tokens to your MetaMask
+																					wallet to track your holdings and
+																					easily manage your assets.
+
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</section>
+														<div class="elementor-element elementor-element-05c86fc e-transform elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+															data-id="05c86fc" data-element_type="widget"
+															data-settings="{&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+															data-widget_type="divider.default">
+															<div class="elementor-widget-container">
+																<div class="elementor-divider">
+																	<span class="elementor-divider-separator">
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-f6f63c3 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="f6f63c3" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fe16a63"
+									data-id="fe16a63" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-02d65ac elementor-widget__width-initial shake elementor-widget elementor-widget-image"
+											data-id="02d65ac" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<img decoding="async" fetchpriority="high" width="1192" height="1278"
+													src="logo_png_2.png"
+													class="elementor-animation-bob attachment-full size-full wp-image-28"
+													alt=""
+													srcset="logo_png_2.png 1192w, logo_png_2-280x300.png 280w, logo_png_2-955x1024.png 955w, logo_png_2-768x823.png 768w"
+													sizes="(max-width: 1192px) 100vw, 1192px">
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-e07e395 zoom-in-out-box elementor-widget elementor-widget-heading"
+											data-id="e07e395" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">FISHY</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-a348268 basedfish elementor-widget elementor-widget-heading"
+											data-id="a348268" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<p class="elementor-heading-title elementor-size-default">Swim
+													fin-to-fin with Fishy as he dominates and sets forward as the one
+													&amp; only King of the Sea in this space!</p>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-cf26a02 elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons"
+											data-id="cf26a02" data-element_type="widget"
+											data-widget_type="social-icons.default">
+											<div class="elementor-widget-container">
+												<style>
+													/*! elementor - v3.16.0 - 14-09-2023 */
+													.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,
+													.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,
+													.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container {
+														line-height: 1;
+														font-size: 0
+													}
+
+													.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid {
+														display: inline-grid
+													}
+
+													.elementor-widget-social-icons .elementor-grid {
+														grid-column-gap: var(--grid-column-gap, 5px);
+														grid-row-gap: var(--grid-row-gap, 5px);
+														grid-template-columns: var(--grid-template-columns);
+														justify-content: var(--justify-content, center);
+														justify-items: var(--justify-content, center)
+													}
+
+													.elementor-icon.elementor-social-icon {
+														font-size: var(--icon-size, 25px);
+														line-height: var(--icon-size, 25px);
+														width: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));
+														height: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))
+													}
+
+													.elementor-social-icon {
+														--e-social-icon-icon-color: #fff;
+														display: inline-flex;
+														background-color: #69727d;
+														align-items: center;
+														justify-content: center;
+														text-align: center;
+														cursor: pointer
+													}
+
+													.elementor-social-icon i {
+														color: var(--e-social-icon-icon-color)
+													}
+
+													.elementor-social-icon svg {
+														fill: var(--e-social-icon-icon-color)
+													}
+
+													.elementor-social-icon:last-child {
+														margin: 0
+													}
+
+													.elementor-social-icon:hover {
+														opacity: .9;
+														color: #fff
+													}
+
+													.elementor-social-icon-android {
+														background-color: #a4c639
+													}
+
+													.elementor-social-icon-apple {
+														background-color: #999
+													}
+
+													.elementor-social-icon-behance {
+														background-color: #1769ff
+													}
+
+													.elementor-social-icon-bitbucket {
+														background-color: #205081
+													}
+
+													.elementor-social-icon-codepen {
+														background-color: #000
+													}
+
+													.elementor-social-icon-delicious {
+														background-color: #39f
+													}
+
+													.elementor-social-icon-deviantart {
+														background-color: #05cc47
+													}
+
+													.elementor-social-icon-digg {
+														background-color: #005be2
+													}
+
+													.elementor-social-icon-dribbble {
+														background-color: #ea4c89
+													}
+
+													.elementor-social-icon-elementor {
+														background-color: #d30c5c
+													}
+
+													.elementor-social-icon-envelope {
+														background-color: #ea4335
+													}
+
+													.elementor-social-icon-facebook,
+													.elementor-social-icon-facebook-f {
+														background-color: #3b5998
+													}
+
+													.elementor-social-icon-flickr {
+														background-color: #0063dc
+													}
+
+													.elementor-social-icon-foursquare {
+														background-color: #2d5be3
+													}
+
+													.elementor-social-icon-free-code-camp,
+													.elementor-social-icon-freecodecamp {
+														background-color: #006400
+													}
+
+													.elementor-social-icon-github {
+														background-color: #333
+													}
+
+													.elementor-social-icon-gitlab {
+														background-color: #e24329
+													}
+
+													.elementor-social-icon-globe {
+														background-color: #69727d
+													}
+
+													.elementor-social-icon-google-plus,
+													.elementor-social-icon-google-plus-g {
+														background-color: #dd4b39
+													}
+
+													.elementor-social-icon-houzz {
+														background-color: #7ac142
+													}
+
+													.elementor-social-icon-instagram {
+														background-color: #262626
+													}
+
+													.elementor-social-icon-jsfiddle {
+														background-color: #487aa2
+													}
+
+													.elementor-social-icon-link {
+														background-color: #818a91
+													}
+
+													.elementor-social-icon-linkedin,
+													.elementor-social-icon-linkedin-in {
+														background-color: #0077b5
+													}
+
+													.elementor-social-icon-medium {
+														background-color: #00ab6b
+													}
+
+													.elementor-social-icon-meetup {
+														background-color: #ec1c40
+													}
+
+													.elementor-social-icon-mixcloud {
+														background-color: #273a4b
+													}
+
+													.elementor-social-icon-odnoklassniki {
+														background-color: #f4731c
+													}
+
+													.elementor-social-icon-pinterest {
+														background-color: #bd081c
+													}
+
+													.elementor-social-icon-product-hunt {
+														background-color: #da552f
+													}
+
+													.elementor-social-icon-reddit {
+														background-color: #ff4500
+													}
+
+													.elementor-social-icon-rss {
+														background-color: #f26522
+													}
+
+													.elementor-social-icon-shopping-cart {
+														background-color: #4caf50
+													}
+
+													.elementor-social-icon-skype {
+														background-color: #00aff0
+													}
+
+													.elementor-social-icon-slideshare {
+														background-color: #0077b5
+													}
+
+													.elementor-social-icon-snapchat {
+														background-color: #fffc00
+													}
+
+													.elementor-social-icon-soundcloud {
+														background-color: #f80
+													}
+
+													.elementor-social-icon-spotify {
+														background-color: #2ebd59
+													}
+
+													.elementor-social-icon-stack-overflow {
+														background-color: #fe7a15
+													}
+
+													.elementor-social-icon-steam {
+														background-color: #00adee
+													}
+
+													.elementor-social-icon-stumbleupon {
+														background-color: #eb4924
+													}
+
+													.elementor-social-icon-telegram {
+														background-color: #2ca5e0
+													}
+
+													.elementor-social-icon-thumb-tack {
+														background-color: #1aa1d8
+													}
+
+													.elementor-social-icon-tripadvisor {
+														background-color: #589442
+													}
+
+													.elementor-social-icon-tumblr {
+														background-color: #35465c
+													}
+
+													.elementor-social-icon-twitch {
+														background-color: #6441a5
+													}
+
+													.elementor-social-icon-twitter {
+														background-color: #1da1f2
+													}
+
+													.elementor-social-icon-viber {
+														background-color: #665cac
+													}
+
+													.elementor-social-icon-vimeo {
+														background-color: #1ab7ea
+													}
+
+													.elementor-social-icon-vk {
+														background-color: #45668e
+													}
+
+													.elementor-social-icon-weibo {
+														background-color: #dd2430
+													}
+
+													.elementor-social-icon-weixin {
+														background-color: #31a918
+													}
+
+													.elementor-social-icon-whatsapp {
+														background-color: #25d366
+													}
+
+													.elementor-social-icon-wordpress {
+														background-color: #21759b
+													}
+
+													.elementor-social-icon-xing {
+														background-color: #026466
+													}
+
+													.elementor-social-icon-yelp {
+														background-color: #af0606
+													}
+
+													.elementor-social-icon-youtube {
+														background-color: #cd201f
+													}
+
+													.elementor-social-icon-500px {
+														background-color: #0099e5
+													}
+
+													.elementor-shape-rounded .elementor-icon.elementor-social-icon {
+														border-radius: 10%
+													}
+
+													.elementor-shape-circle .elementor-icon.elementor-social-icon {
+														border-radius: 50%
+													}
+												</style>
+												<div class="elementor-social-icons-wrapper elementor-grid">
+													<span class="elementor-grid-item">
+														<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-b877f7c"
+															href="https://twitter.com/FishyCoinETH" target="_blank">
+															<span class="elementor-screen-only">Twitter</span>
+															<i class="fab fa-twitter"></i> </a>
+													</span>
+													<span class="elementor-grid-item">
+														<a class="elementor-icon elementor-social-icon elementor-social-icon-telegram elementor-repeater-item-3279281"
+															href="https://t.me/FishyCoinETH" target="_blank">
+															<span class="elementor-screen-only">Telegram</span>
+															<i class="fab fa-telegram"></i> </a>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-a30ef61 basedfish elementor-widget elementor-widget-heading"
+											data-id="a30ef61" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<p class="elementor-heading-title elementor-size-default">
+													team@fishycoin.com</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<link rel="stylesheet" id="e-animations-css" href="animations.min.css" media="all">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<span id="elementor-device-mode" class="elementor-screen-only"></span>
+	<svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+
+
+
+
+										</div>
+									</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html><!-- Page cached by LiteSpeed Cache 5.6 on 2023-09-18 03:00:03 -->
